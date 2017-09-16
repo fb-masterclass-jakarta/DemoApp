@@ -5,10 +5,10 @@ import FBSDK from 'react-native-fbsdk'
 const {
   LoginButton,
   AccessToken
-} = FBSDK
+} = FBSDK;
  
 
-class App extends Component {
+export default class App extends Component {
     render(){
         return (
             <View style={{ flex:1, justifyContent: 'center', alignItems:'center' }}>
@@ -32,6 +32,3 @@ class App extends Component {
         )
     }
 }
-
-
-export default App
