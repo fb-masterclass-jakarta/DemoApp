@@ -1,3 +1,6 @@
+<img width="400" alt="RN-FBSDK" src="https://user-images.githubusercontent.com/6022596/30513845-78dbc578-9b34-11e7-9bc7-e3778a623209.png">
+
+
 ## Step by Step
 1. Create RN App
 2. Downgrade ver. RN + hapus node_modules and package-lock.json
