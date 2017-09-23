@@ -4,15 +4,28 @@ import FBSDK from 'react-native-fbsdk'
 
 const {
   LoginButton,
-  AccessToken
+  AccessToken,
+  AppEventsLogger
 } = FBSDK;
  
 
 export default class App extends Component {
+    
+    clickHandler = () => {
+        AppEventsLogger.logEvent('BtnFBAnalytics');
+    }
+
     render(){
         return (
             <View style={{ flex:1, justifyContent: 'center', alignItems:'center' }}>
                 <Text style={{ fontSize:25, marginBottom:15 }}>Please Log in</Text>
+
+                <TouchableOpacity 
+                    style={{ backgroundColor: 'green', marginBottom: 20, borderRadius: 5 }}
+                    onPress={() => this.clickHandler()}>
+                    <Text style={{ color: 'white', fontSize: 20, margin: 10 }}>Ini Button - FB analytics</Text>
+                </TouchableOpacity>
+
                 <LoginButton
                     publishPermissions={["publish_actions"]}
                     onLoginFinished={(error, result) => {
